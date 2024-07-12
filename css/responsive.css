@@ -91,7 +91,8 @@
   }
 
   .product_img {
-    height: 230px;
+    padding: 10px;
+    height: 100px;
   }
 
   .hero,

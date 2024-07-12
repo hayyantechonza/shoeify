@@ -28,27 +28,29 @@ $(function() {
   var singleProductThumbSlider = new Swiper(".single_product_thumb_slider", {
     freeMode: true,
     spaceBetween: 10,
+    loop: true,
     mousewheel: true,
     slidesPerView: "auto",
     reverseDirection: true,
-    direction: "horizontal",
     watchSlidesProgress: true,
-    breakpoints: {
-      768: {
-        direction: "vertical",
-      }
-    }
   });
 
   var singleProductSlider = new Swiper('.single_product_slider', {
-    speed: 500,
+    speed: 0,
+    loop: true,
     spaceBetween: 20,
     slidesPerView: 1,
+    effect: "fade",
     zoom: {
       maxRatio: 2,
     },
     thumbs: {
       swiper: singleProductThumbSlider,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 
